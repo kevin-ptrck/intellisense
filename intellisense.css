@@ -1,0 +1,19 @@
+#intel-list{
+	width: 250px;
+	height: 150px;
+	background: white;
+	border: 1px gray solid;
+    box-shadow: 5px 5px 5px grey;
+    position: fixed;
+    overflow: auto;
+    visibility: hidden;
+}
+
+.intel-list-item {
+	padding: 5px 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.intel-list-item:hover{
+	background-color: lightblue;
+}
