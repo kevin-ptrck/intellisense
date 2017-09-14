@@ -1,4 +1,6 @@
+//GLOBAL VARIABLE TO HOLD THE INPUT BOX YOU ARE WORKING IN
 var inputElement = "";
+var keyWord = "item.";
 
 $(document).ready(function(){
 	
@@ -15,7 +17,7 @@ $(document).ready(function(){
 		//ADD TO TEXT FIELD WHEN THE USER SELECTS AN ITEM AND RE-FOCUS ON TEXT BOX
 		$("#intel-list").css("visibility","hidden");
 		var selectedItem = $("#intel-hiddenSelected").val();
-		inputElement.val(inputElement.val().replace("item.",selectedItem) + " ")
+		inputElement.val(inputElement.val().replace(keyWord,selectedItem) + " ")
 		inputElement.focus()
 	})
 	
@@ -25,7 +27,7 @@ $(document).ready(function(){
 			//GET THE CHARACTER LOCATION OF THE CURSOR SO WE KNOW WHERE TO PUT THE DATA IN
 			var curPosition = parseInt($(document.activeElement.selectionStart)[0])
 			//IF THE SYNTAX 'item.' WAS FOUND THEN DISPLAY THE INTELLISENSE BOX
-			if ($(this).val().substring(curPosition-5,curPosition) == "item.") {
+			if ($(this).val().substring(curPosition-keyWord.length,curPosition) == keyWord) {
 				$("#intel-list").empty()
 				$("#intel-list").css("top",$(document.activeElement).position().top+$(document.activeElement).height())
 				$("#intel-list").css("left",$(document.activeElement).position().left+50)
