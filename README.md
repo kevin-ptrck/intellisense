@@ -13,17 +13,14 @@ JavaScript Intellisense for input Boxes
 	<li>Add a div with an id of 'intel-list' for the list of items to select from</li>
 </ul>
 
-<p>
-	<code>
-		<textarea cols='100' rows='5' class='intellisense'></textarea>
+<code>
+	<textarea cols='100' rows='5' class='intellisense'></textarea>
 
-		<input type="hidden" id="intel-hiddenSelected" />
+	<input type="hidden" id="intel-hiddenSelected" />
 
-		<div id="intel-list">
-		</div>
-	</code>
+	<div id="intel-list">
+	</div>
+</code>
 
-
-</p>
 
 
